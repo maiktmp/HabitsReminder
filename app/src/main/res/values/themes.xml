@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HabitsReminder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/primaryDarkColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryLightColor</item>
+        <item name="colorOnSecondary">@color/secondaryDarkColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/secondaryColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="HabitsReminder.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/secondaryColor</item>
+        <item name="hintTextColor">@color/secondaryColor</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+
+    <style name="HabitsReminder.Theme.TextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorControlActivated">@color/secondaryColor</item>
+    </style>
+
+
+    <style name="HabitsReminder.PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/secondaryColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">20dp</item>
+
+
+    </style>
+
+
+</resources>

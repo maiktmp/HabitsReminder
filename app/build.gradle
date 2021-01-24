@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply plugin: 'com.google.gms.google-services'
+apply from: '../config/functions.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "mx.com.maiktmp.habitsreminder"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, DEBUG_MODE, TRUE
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, DEBUG_MODE, FALSE
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:${rootProject.ext.vKtxCore}"
+
+    //Android UI
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.vAppCompat}"
+    implementation "com.google.android.material:material:${rootProject.ext.vAppMaterial}"
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.vConstraintLayout}"
+
+    //Test
+    testImplementation "junit:junit:${rootProject.ext.vJunit}"
+    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.vJunitExt}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.vEsspresoCore}"
+
+    //Logger
+    implementation "com.orhanobut:logger:${rootProject.ext.vLogger}"
+
+    //Material
+    implementation "com.google.android.material:material:${rootProject.ext.vMaterial}"
+
+    //FB
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+
+
+}
