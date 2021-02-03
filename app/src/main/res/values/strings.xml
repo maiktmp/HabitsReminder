@@ -3,4 +3,16 @@
     <string name="log_in">Acceder</string>
     <string name="password">Contraseña</string>
     <string name="email">Correo</string>
+    <string name="loading">Espera</string>
+    <string name="validation_require">El campo es requerido</string>
+    <string name="validation_email">Ingrese una dirección de correo valida</string>
+    <string name="or">o</string>
+    <string name="search">Buscar</string>
+    <string name="elements">Elementos</string>
+    <string name="name">Nombre</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="color">Color</string>
+    <string name="delete">Eliminar</string>
+    <string name="categories_empty">Para agregar una categoría haz clic en \'+\'</string>
 </resources>

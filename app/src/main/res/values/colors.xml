@@ -14,4 +14,16 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="green">#66BB6A</color>
+    <color name="red">#EF5350</color>
+
+    <color name="grey">#9E9B9A</color>
+
+    <color name="yellow">#FFC107</color>
+    <color name="blue">#42A5F5</color>
+    <color name="greenOpaque">#66BB6A</color>
+    <color name="purple">#AB47BC</color>
+    <color name="aqua">#00BCD4</color>
+
+
 </resources>
