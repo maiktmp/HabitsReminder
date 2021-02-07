@@ -1,9 +1,8 @@
 package mx.com.maiktmp.database
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
+import mx.com.maiktmp.database.converters.Converters
 import mx.com.maiktmp.database.dao.CategoryDao
 import mx.com.maiktmp.database.entities.CategoryDB
 
@@ -12,7 +11,7 @@ import mx.com.maiktmp.database.entities.CategoryDB
     version = 4,
     exportSchema = false
 )
-
+@TypeConverters(Converters::class)
 public abstract class DBHabitsReminder : RoomDatabase() {
 
     abstract fun categoryDao(): CategoryDao

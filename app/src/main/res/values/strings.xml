@@ -15,4 +15,6 @@
     <string name="color">Color</string>
     <string name="delete">Eliminar</string>
     <string name="categories_empty">Para agregar una categoría haz clic en \'+\'</string>
+    <string name="reminders_empty">Para agregar una tarea haz clic en \'+\'</string>
+    <string name="categories">Categorías</string>
 </resources>

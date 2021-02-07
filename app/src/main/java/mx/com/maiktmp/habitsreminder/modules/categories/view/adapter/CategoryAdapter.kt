@@ -22,6 +22,7 @@ class CategoryAdapter(
     var categories: ArrayList<CategoryDB>,
     var categoryListener: CategoriesFragment.CategoryListener? = null
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+    var originalData = ArrayList<CategoryDB>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
@@ -34,7 +35,6 @@ class CategoryAdapter(
         holder.vBind.tvCategoryName.text = category.name
         holder.vBind.cvRoot.backgroundTintList =
             ContextCompat.getColorStateList(holder.itemView.context, category.color!!)
-
         setupLongClickListener(holder.vBind, category, position)
     }
 

@@ -16,7 +16,7 @@ interface CategoryView {
 
     fun listData(list: ArrayList<CategoryDB>)
 
-    fun deleteCategoryOn(index: Int)
+    fun deleteCategoryOn(categoryId: Long)
 
 
 }

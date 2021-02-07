@@ -12,7 +12,7 @@ object Extensions {
 
 
     //Toast
-    fun Context.displayToast(message: String?, duration: Int) {
+    fun Context?.displayToast(message: String?, duration: Int) {
         Toast.makeText(this, message, duration).show()
     }
 

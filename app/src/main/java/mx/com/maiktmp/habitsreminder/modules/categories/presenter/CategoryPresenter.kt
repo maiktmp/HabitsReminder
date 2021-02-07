@@ -35,12 +35,12 @@ class CategoryPresenter @Inject constructor(
         }.autoClear()
     }
 
-    fun deleteCategory(category: CategoryDB, index: Int) {
+    fun deleteCategory(category: CategoryDB) {
         view()?.showProgress()
         repository.deleteCategory(category) {
             view()?.hideProgress()
             if (it.success) {
-                view()?.deleteCategoryOn(index)
+                view()?.deleteCategoryOn(category.id!!)
             } else {
                 view()?.showError(it.message!!)
             }
