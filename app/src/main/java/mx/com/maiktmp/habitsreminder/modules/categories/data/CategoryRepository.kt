@@ -1,13 +1,11 @@
 package mx.com.maiktmp.habitsreminder.modules.categories.data
 
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import mx.com.maiktmp.database.dao.CategoryDao
 import mx.com.maiktmp.database.entities.CategoryDB
 import mx.com.maiktmp.habitsreminder.models.GenericResponse
-import java.util.*
 import kotlin.collections.ArrayList
 
 class CategoryRepository(private val categoryDao: CategoryDao) {
@@ -51,7 +49,7 @@ class CategoryRepository(private val categoryDao: CategoryDao) {
     fun deleteCategory(category: CategoryDB, cb: (GenericResponse<Any>) -> Unit): Disposable {
         val gr = GenericResponse<Any>()
         return categoryDao
-            .deletePersonData(category)
+            .deleteCategory(category)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({

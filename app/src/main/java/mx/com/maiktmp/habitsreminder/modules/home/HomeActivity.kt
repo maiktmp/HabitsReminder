@@ -3,12 +3,14 @@ package mx.com.maiktmp.habitsreminder.modules.home
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import mx.com.maiktmp.database.entities.CategoryDB
 import mx.com.maiktmp.habitsreminder.R
 import mx.com.maiktmp.habitsreminder.databinding.ActivityHomeBinding
 import mx.com.maiktmp.habitsreminder.modules.CustomActivity
 import mx.com.maiktmp.habitsreminder.modules.categories.view.CategoriesFragment
 import mx.com.maiktmp.habitsreminder.modules.categories.view.dialogs.FormCategoryDialog
+import mx.com.maiktmp.habitsreminder.modules.reminders.ReminderFormDialog
 import mx.com.maiktmp.habitsreminder.utils.Codes
 import mx.com.maiktmp.habitsreminder.utils.GenericDialog
 
@@ -25,6 +27,7 @@ class HomeActivity : CustomActivity(), CategoriesFragment.CategoryListener {
         super.toolbarBinding = vBind.iToolbar
         super.setupToolbar(getString(R.string.categories))
 
+//        ReminderFormDialog().show(supportFragmentManager,"ASD")
         setupAddBtn()
         setupMainFragment()
     }

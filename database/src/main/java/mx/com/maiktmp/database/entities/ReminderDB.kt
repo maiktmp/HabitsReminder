@@ -1,5 +1,6 @@
 package mx.com.maiktmp.database.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
@@ -18,6 +19,10 @@ data class ReminderDB(
 
     val time: Date? = null,
 
+    val lat: Double? = null,
 
+    val lng: Double? = null,
 
-    )
+    @ColumnInfo(name = "fk_id_category")
+    val fkIdCategory: Long,
+)

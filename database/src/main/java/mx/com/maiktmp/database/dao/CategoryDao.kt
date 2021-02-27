@@ -16,7 +16,7 @@ interface CategoryDao {
     fun getAll(): Single<List<CategoryDB>>
 
     @Delete
-    fun deletePersonData(category: CategoryDB): Completable
+    fun deleteCategory(category: CategoryDB): Completable
 
 
 }

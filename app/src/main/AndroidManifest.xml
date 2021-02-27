@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HabitsReminder">
-<!--        <activity android:name=".ui_modules.auth.LoginActivity">-->
+<!--        <activity android:name=".modules.auth.view.LoginActivity">-->
         <activity android:name=".modules.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
